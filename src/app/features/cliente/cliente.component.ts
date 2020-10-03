@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Cliente} from '../../shared/entities/Cliente'
 
 export interface PeriodicElement {
   name: string;

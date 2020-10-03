@@ -9,6 +9,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 
+import {Cliente} from './entities/Cliente';
+
+
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -39,7 +42,7 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatTableModule,
+    MatTableModule
 
     // local
     //TableListComponent
