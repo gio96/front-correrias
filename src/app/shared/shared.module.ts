@@ -8,6 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
+import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse, HttpClientModule } from '@angular/common/http';
 
 import {Cliente} from './entities/Cliente';
 
@@ -16,6 +17,7 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [],
+  providers:[HttpClientModule],
   imports: [
     // vendor
     CommonModule,
@@ -24,7 +26,8 @@ import { RouterModule } from '@angular/router';
     // material
     MatCardModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
+    HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse
   ],
   exports: [
     // vendor
@@ -42,7 +45,8 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse
 
     // local
     //TableListComponent
