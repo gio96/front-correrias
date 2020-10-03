@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { stringify } from 'querystring';
 import { ClientesService } from 'src/app/shared/servicios/clientes.service';
 import {Cliente} from '../../shared/entities/Cliente'
+import {MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ModalClienteComponent } from 'src/app/shared/modal-cliente/modal-cliente.component';
 
 
 @Component({
@@ -13,7 +15,8 @@ export class ClienteComponent implements OnInit{
 
   cliente: Cliente[]= [];
 
-  constructor(private obtenerClientesService: ClientesService) { }
+  constructor(private obtenerClientesService: ClientesService,
+    public matDialog: MatDialog) { }
 
   ngOnInit(): void {
     this.obtenerClientesService.getEmployees().subscribe(res => {
@@ -30,8 +33,15 @@ export class ClienteComponent implements OnInit{
     alert(idClient)
   }
 
-  crearCliente(cliente: Cliente){
-    alert(JSON.stringify(cliente))
+
+  openDialog() {
+    const dialogConfig = new MatDialogConfig();
+    this.matDialog.open(ModalClienteComponent, dialogConfig);
   }
+
+
+  /*crearCliente(cliente: Cliente){
+    alert(JSON.stringify(cliente))
+  }*/
 
 }

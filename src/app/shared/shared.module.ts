@@ -8,15 +8,24 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
+
 import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse, HttpClientModule } from '@angular/common/http';
 
-import {Cliente} from './entities/Cliente';
+import {MatDialogModule} from '@angular/material/dialog';
 
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 import { RouterModule } from '@angular/router';
+import { ModalClienteComponent } from './modal-cliente/modal-cliente.component';
+import { MatDialogRef } from "@angular/material/dialog";
+
 
 @NgModule({
-  declarations: [],
+  declarations: [ModalClienteComponent],
   providers:[HttpClientModule],
   imports: [
     // vendor
@@ -27,7 +36,18 @@ import { RouterModule } from '@angular/router';
     MatCardModule,
     MatButtonModule,
     MatTableModule,
-    HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse
+    MatDialogModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatDialogRef,
+
+    //http
+    HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse,
+
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     // vendor
@@ -46,9 +66,19 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
     MatListModule,
     MatTableModule,
-    HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse
+    MatDialogModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatDialogRef,
+
+
+    //http
+    HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse,
 
     // local
+    ModalClienteComponent
     //TableListComponent
   ]
 })

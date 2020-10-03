@@ -11,7 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse, HttpClientModule } from '@angular/common/http';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -32,7 +32,8 @@ import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse, HttpClientMod
     MatIconModule,
     MatListModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDialogModule
   ],
   exports: [MainLayoutComponent]
 })
