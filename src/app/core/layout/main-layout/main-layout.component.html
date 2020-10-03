@@ -1,4 +1,15 @@
-<p>main-layout works!</p>
 <main>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <h1>Correrias</h1>
+      <span class="menu-spacer"></span>
+      <div>
+        <a mat-button [routerLink]="'/clientes'"> Clientes </a>
+        <a mat-button [routerLink]="'/facturas'"> Facturas </a>
+        <a mat-button [routerLink]="'/contacts'"> Contacts </a>
+
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
   <router-outlet></router-outlet>
 </main>

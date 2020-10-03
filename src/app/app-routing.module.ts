@@ -5,16 +5,12 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'home'
+    redirectTo: 'clientes'
   },
-  {
-    path: 'home',
-    loadChildren: () =>
-      import('./features/root-nav/root-nav.module').then(m => m.RootNavModule)
-  },
-  {
+  { path: 'clientes', loadChildren: () => import('./features/cliente/cliente.module').then(m => m.ClienteModule) },
+  { path: 'facturas', loadChildren: () => import('./features/facturas/facturas.module').then(m => m.FacturasModule) },{
     path: '**',
-    redirectTo: 'home'
+    redirectTo: 'clientes'
   }
 ];
 
