@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { stringify } from 'querystring';
 import { ClientesService } from 'src/app/shared/servicios/clientes.service';
 import {Cliente} from '../../shared/entities/Cliente'
 
@@ -20,7 +21,17 @@ export class ClienteComponent implements OnInit{
     })
   }
 
-  displayedColumns: string[] = ['nombreCompleto', 'ciudad', 'telefono', 'correoCliente'];
+  displayedColumns: string[] = ['nombreCompleto', 'ciudad', 'telefono', 'correoCliente','actions'];
   dataSource = this.cliente;
+
+
+  getIdCliente(idClient){
+    //REDIRIGIR A LA PANTALLA CON LAS FACTURAS QUE TIENE EL USUARIO
+    alert(idClient)
+  }
+
+  crearCliente(cliente: Cliente){
+    alert(JSON.stringify(cliente))
+  }
 
 }
