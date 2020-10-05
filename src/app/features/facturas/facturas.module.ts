@@ -10,6 +10,10 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatListModule} from '@angular/material/list';
+
+
 
 @NgModule({
   declarations: [FacturasComponent],
@@ -23,7 +27,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     FormsModule, ReactiveFormsModule,
     MatGridListModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    MatExpansionModule,
+    MatListModule
   ]
 })
 export class FacturasModule { }

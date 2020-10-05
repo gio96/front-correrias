@@ -1,12 +1,10 @@
+import { Producto } from './Producto';
+
 export interface Factura{
   id: string;
  idCliente: string;
  descuentoFactura: number;
- productos: {
-  nombreProducto: string;
-  cantidad: number;
-  valorUnitario: number;
- }[];
+ productos: Producto[];
  fechaGenerada: string;
  totalFactura: number;
 

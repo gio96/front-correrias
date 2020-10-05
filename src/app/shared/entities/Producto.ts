@@ -1,4 +1,4 @@
-export interface Cliente {
+export interface Producto {
    nombreProducto: string;
    cantidad: number;
    valorUnitario: number;

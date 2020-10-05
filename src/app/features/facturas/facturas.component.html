@@ -1,12 +1,8 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-  <title>Facturas</title>
-
+<!--<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
   <ng-container matColumnDef="descuentoFactura">
     <th mat-header-cell *matHeaderCellDef> Descuento </th>
     <td mat-cell *matCellDef="let element"> {{element.descuentoFactura}} </td>
   </ng-container>
-
-
   <ng-container matColumnDef="totalFactura">
     <th mat-header-cell *matHeaderCellDef> Total </th>
     <td mat-cell *matCellDef="let element"> {{element.totalFactura}} </td>
@@ -19,4 +15,29 @@
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+</table>-->
+
+<mat-accordion displayMode="flat" multi class="mat-table">
+  <section matSort class="mat-elevation-z2 mat-header-row">
+    <span class="mat-header-cell" mat-sort-header="vesselName">Descuento</span>
+    <span class="mat-header-cell" mat-sort-header="vesselId">Total</span>
+    <span class="mat-header-cell" mat-sort-header="vesselStatus">Fecha</span>
+  </section>
+
+  <!--<mat-expansion-panel *ngFor="let item of facturas | async">-->
+  <mat-expansion-panel *ngFor="let item of facturas">
+    <mat-expansion-panel-header class="mat-row">
+      <span class="mat-cell">{{item.descuentoFactura}}</span>
+      <span class="mat-cell">{{item.totalFactura}}</span>
+      <span class="mat-cell">{{item.fechaGenerada}}</span>
+    </mat-expansion-panel-header>
+    <div><pre>
+      <mat-list role="list" *ngFor="let item2 of item.productos">
+        <mat-list-item role="listitem">
+          <b>Nombre: {{item2.nombreProducto}} , Cantidad: {{item2.cantidad}}, Valor: {{item2.valorUnitario}}</b>
+        </mat-list-item>
+      </mat-list>
+    </pre></div>
+  </mat-expansion-panel>
+
+</mat-accordion>
