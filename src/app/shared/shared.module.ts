@@ -13,7 +13,6 @@ import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse, HttpClientMod
 
 import {MatDialogModule} from '@angular/material/dialog';
 
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
@@ -22,6 +21,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { RouterModule } from '@angular/router';
 import { ModalClienteComponent } from './modal-cliente/modal-cliente.component';
 import { MatDialogRef } from "@angular/material/dialog";
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -42,12 +44,11 @@ import { MatDialogRef } from "@angular/material/dialog";
     MatRadioModule,
     MatDatepickerModule,
     MatDialogRef,
+    FormsModule, ReactiveFormsModule,
+
 
     //http
-    HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse,
-
-    FormsModule,
-    ReactiveFormsModule
+    HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse
   ],
   exports: [
     // vendor
@@ -58,10 +59,8 @@ import { MatDialogRef } from "@angular/material/dialog";
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
-    MatButtonModule,
     LayoutModule,
     MatToolbarModule,
-    MatButtonModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
@@ -72,10 +71,9 @@ import { MatDialogRef } from "@angular/material/dialog";
     MatRadioModule,
     MatDatepickerModule,
     MatDialogRef,
-
-
-    //http
+        //http
     HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse,
+    FormsModule, ReactiveFormsModule,
 
     // local
     ModalClienteComponent

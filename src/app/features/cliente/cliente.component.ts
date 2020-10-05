@@ -14,6 +14,7 @@ import { ModalClienteComponent } from 'src/app/shared/modal-cliente/modal-client
 export class ClienteComponent implements OnInit{
 
   cliente: Cliente[]= [];
+  animal: string;
 
   constructor(private obtenerClientesService: ClientesService,
     public matDialog: MatDialog) { }
@@ -36,7 +37,9 @@ export class ClienteComponent implements OnInit{
 
   openDialog() {
     const dialogConfig = new MatDialogConfig();
-    this.matDialog.open(ModalClienteComponent, dialogConfig);
+    dialogConfig.width = '640px';
+    dialogConfig.disableClose= true;
+    const dialogRef = this.matDialog.open(ModalClienteComponent, dialogConfig);
   }
 
 

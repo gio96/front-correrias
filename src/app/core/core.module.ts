@@ -12,7 +12,8 @@ import { MatListModule } from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse, HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @NgModule({
   declarations: [MainLayoutComponent],
@@ -33,7 +34,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatListModule,
     MatTableModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
   ],
   exports: [MainLayoutComponent]
 })

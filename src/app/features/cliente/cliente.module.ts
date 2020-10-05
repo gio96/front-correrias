@@ -7,6 +7,9 @@ import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import { ModalClienteComponent } from 'src/app/shared/modal-cliente/modal-cliente.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { MatDialogModule } from '@angular/material/dialog';
     ClienteRoutingModule,
     MatTableModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule, ReactiveFormsModule,
+    MatGridListModule,
+    MatFormFieldModule
   ],
   entryComponents: [ModalClienteComponent]
 })
