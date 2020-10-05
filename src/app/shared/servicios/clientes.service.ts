@@ -33,6 +33,10 @@ export class ClientesService {
     return this.http.get<Factura[]>(`${this.endpoint}/${idCliente}/facturas`, {observe: 'response'});
   }
 
+  public createBilling(data, idCliente: string): Observable<Factura>{
+    return this.http.post<Factura>(`${this.endpoint}/${idCliente}/facturas`,JSON.stringify(data),this.httpOptions)
+  }
+
 
   private handleError(error: HttpErrorResponse): any {
     if (error.error instanceof ErrorEvent) {

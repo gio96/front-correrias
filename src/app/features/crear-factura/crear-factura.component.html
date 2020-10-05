@@ -1,0 +1,39 @@
+<div class="vertical-center">
+  <mat-card>
+  <mat-card-title>Crear Factura</mat-card-title>
+  <div class="form-container">
+    <form [formGroup]="createFactura" (submit)="submit()">
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> Nombre
+        </mat-label>
+        <input matInput formControlName="name" type="text" required>
+        <mat-error *ngIf="createFactura.controls.name.touched && createFactura.controls.name.invalid">
+          <span *ngIf="createFactura.controls.name.errors.required">This field is mandatory.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> Cantidad
+        </mat-label>
+        <input matInput formControlName="cantidad" type="number" required>
+        <mat-error *ngIf="createFactura.controls.cantidad.touched && createFactura.controls.cantidad.invalid">
+          <span *ngIf="createFactura.controls.cantidad.errors.required">This field is mandatory.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> Valor Unitario
+        </mat-label>
+        <input matInput formControlName="valor" type="number" required>
+        <mat-error *ngIf="createFactura.controls.valor.touched && createFactura.controls.valor.invalid">
+          <span *ngIf="createFactura.controls.valor.errors.required">This field is mandatory.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> Descuento Factura        </mat-label>
+        <input matInput formControlName="descuento" type="number">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Agregar</button>
+      <button mat-raised-button color="secondary" (click)="generarFactura()">Generar</button>
+    </form>
+  </div>
+</mat-card>
+</div>

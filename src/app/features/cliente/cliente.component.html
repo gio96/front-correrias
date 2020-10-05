@@ -26,7 +26,14 @@
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef> Facturas </th>
     <td mat-cell *matCellDef="let element" class="action-link">
-      <button mat-stroked-button color="primary" [routerLink]="'/facturas'" [queryParams]="{idClienteFacura: element.id}">Ver Facturas</button>
+      <button mat-mini-fab color="primary" aria-label="Ver facturas" [routerLink]="'/facturas'" [queryParams]="{idClienteFacura: element.id}">
+        <mat-icon>assignment</mat-icon>
+      </button>
+      <button mat-mini-fab color="primary" aria-label="Crear Facturas" [routerLink]="'/crearfactura'" [queryParams]="{idClienteFacura: element.id}">
+        <mat-icon>move_to_inbox</mat-icon>
+      </button>
+      <!--<button mat-stroked-button color="primary" [routerLink]="'/facturas'" [queryParams]="{idClienteFacura: element.id}">Ver Facturas</button>
+      <button mat-stroked-button color="primary" [routerLink]="'/crearfactura'" [queryParams]="{idClienteFacura: element.id}">Crear Facturas</button>-->
     </td>
   </ng-container>
 
