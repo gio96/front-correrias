@@ -1,0 +1,29 @@
+/*.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}*/
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.example-container{
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.form-container{
+  width: 400 px;
+  margin: 0 px auto;
+  margin-top: 200 px;
+}
+
+.form-field{
+  display: block;
+  width: fit-content;
+}

@@ -14,6 +14,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse, HttpClientMod
 import {MatDialogModule} from '@angular/material/dialog';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [MainLayoutComponent],
@@ -35,6 +36,9 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
     MatTableModule,
     HttpClientModule,
     MatDialogModule,
+    MatFormFieldModule,
+
+    FormsModule, ReactiveFormsModule
   ],
   exports: [MainLayoutComponent]
 })

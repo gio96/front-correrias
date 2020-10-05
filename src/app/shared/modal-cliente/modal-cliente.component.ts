@@ -43,7 +43,6 @@ export class ModalClienteComponent implements OnInit {
     //alert(this.fname)
     //alert(this.addCusForm.)
     this.dialogRef.close(this.addCusForm.value)
-    alert(this.firstname)
     //alert(this.fname)
     //this.dialogRef.afterClosed().subscribe(value => {
     //  alert(`Dialog sent: ${value}`)

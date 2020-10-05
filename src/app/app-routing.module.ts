@@ -8,7 +8,8 @@ const routes: Routes = [
     redirectTo: 'clientes'
   },
   { path: 'clientes', loadChildren: () => import('./features/cliente/cliente.module').then(m => m.ClienteModule) },
-  { path: 'facturas', loadChildren: () => import('./features/facturas/facturas.module').then(m => m.FacturasModule) },{
+  { path: 'facturas', loadChildren: () => import('./features/facturas/facturas.module').then(m => m.FacturasModule) },
+  { path: 'crearcliente', loadChildren: () => import('./features/crear-cliente/crear-cliente.module').then(m => m.CrearClienteModule) },{
     path: '**',
     redirectTo: 'clientes'
   }

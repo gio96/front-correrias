@@ -1,0 +1,40 @@
+<div class="vertical-center">
+  <div class="form-container">
+    <form [formGroup]="createCliente" (submit)="submit()">
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> Name
+        </mat-label>
+        <input matInput formControlName="name" type="text" required>
+        <mat-error *ngIf="createCliente.controls.name.touched && createCliente.controls.name.invalid">
+          <span *ngIf="createCliente.controls.name.errors.required">This field is mandatory.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> City
+        </mat-label>
+        <input matInput formControlName="city" type="text" required>
+        <mat-error *ngIf="createCliente.controls.city.touched && createCliente.controls.city.invalid">
+          <span *ngIf="createCliente.controls.city.errors.required">This field is mandatory.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> Phone
+        </mat-label>
+        <input matInput formControlName="phone" type="number" required>
+        <mat-error *ngIf="createCliente.controls.phone.touched && createCliente.controls.phone.invalid">
+          <span *ngIf="createCliente.controls.phone.errors.required">This field is mandatory.</span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label> E-mail
+        </mat-label>
+        <input matInput formControlName="email" required>
+        <mat-error *ngIf="createCliente.controls.email.touched && createCliente.controls.email.invalid">
+          <span *ngIf="createCliente.controls.email.errors.required">This field is mandatory.</span>
+          <span *ngIf="createCliente.controls.email.errors.pattern">This field is invalid.</span>
+        </mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Log In</button>
+    </form>
+  </div>
+</div>
