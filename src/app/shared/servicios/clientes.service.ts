@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse } from '@angul
 import { Observable, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Cliente } from '../entities/Cliente';
+import { Factura } from '../entities/Factura';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +26,11 @@ export class ClientesService {
 
   public createClient(data): Observable<Cliente>{
     return this.http.post<Cliente>(this.endpoint,JSON.stringify(data),this.httpOptions)
+  }
+
+
+  public getFacturas(idCliente: string): Observable<HttpResponse<Factura[]>>{
+    return this.http.get<Factura[]>(`${this.endpoint}/${idCliente}/facturas`, {observe: 'response'});
   }
 
 

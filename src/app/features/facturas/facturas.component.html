@@ -1,1 +1,22 @@
-<p>facturas works!</p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <title>Facturas</title>
+
+  <ng-container matColumnDef="descuentoFactura">
+    <th mat-header-cell *matHeaderCellDef> Descuento </th>
+    <td mat-cell *matCellDef="let element"> {{element.descuentoFactura}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="totalFactura">
+    <th mat-header-cell *matHeaderCellDef> Total </th>
+    <td mat-cell *matCellDef="let element"> {{element.totalFactura}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fechaGenerada">
+    <th mat-header-cell *matHeaderCellDef> Fecha </th>
+    <td mat-cell *matCellDef="let element"> {{element.fechaGenerada}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

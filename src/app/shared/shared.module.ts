@@ -24,6 +24,8 @@ import { MatDialogRef } from "@angular/material/dialog";
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { MatInputModule } from '@angular/material/input';
+
 
 
 @NgModule({
@@ -48,7 +50,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
     //http
-    HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse
+    HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse,
+
+    MatInputModule
   ],
   exports: [
     // vendor
@@ -74,6 +78,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         //http
     HttpClient, HttpHeaders, HttpErrorResponse, HttpResponse,
     FormsModule, ReactiveFormsModule,
+
+    MatInputModule,
 
     // local
     ModalClienteComponent

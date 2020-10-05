@@ -29,22 +29,11 @@ export class ClienteComponent implements OnInit{
   dataSource = this.cliente;
 
 
-  getIdCliente(idClient){
-    //REDIRIGIR A LA PANTALLA CON LAS FACTURAS QUE TIENE EL USUARIO
-    alert(idClient)
-  }
-
-
-  openDialog() {
+  /*openDialog() {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.width = '640px';
     dialogConfig.disableClose= true;
     const dialogRef = this.matDialog.open(ModalClienteComponent, dialogConfig);
-  }
-
-
-  /*crearCliente(cliente: Cliente){
-    alert(JSON.stringify(cliente))
   }*/
 
 }

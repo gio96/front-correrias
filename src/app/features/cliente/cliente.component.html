@@ -26,13 +26,19 @@
   <ng-container matColumnDef="actions">
     <th mat-header-cell *matHeaderCellDef> Facturas </th>
     <td mat-cell *matCellDef="let element" class="action-link">
-      <button mat-stroked-button color="primary" (click)="getIdCliente(element.id)">Ver Facturas</button>
+      <button mat-stroked-button color="primary" [routerLink]="'/facturas'" [queryParams]="{idClienteFacura: element.id}">Ver Facturas</button>
     </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
+
+<!--<div class="example-button-container">
+  <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+    <mat-icon>home</mat-icon>
+  </button>
+</div>-->
 
 <!--<div class="container">
   <div class="vertical-center">

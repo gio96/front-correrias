@@ -10,6 +10,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
+
+
 
 
 @NgModule({
@@ -22,7 +25,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatDialogModule,
     FormsModule, ReactiveFormsModule,
     MatGridListModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatIconModule
   ],
   entryComponents: [ModalClienteComponent]
 })
