@@ -19,8 +19,12 @@ export class ClientesService {
     })
   }
 
-  public getEmployees(): Observable<HttpResponse<Cliente[]>>{
+  public getClients(): Observable<HttpResponse<Cliente[]>>{
     return this.http.get<Cliente[]>(this.endpoint, {observe: 'response'});
+  }
+
+  public createClient(data): Observable<Cliente>{
+    return this.http.post<Cliente>(this.endpoint,JSON.stringify(data),this.httpOptions)
   }
 
 

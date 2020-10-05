@@ -20,7 +20,7 @@ export class ClienteComponent implements OnInit{
     public matDialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.obtenerClientesService.getEmployees().subscribe(res => {
+    this.obtenerClientesService.getClients().subscribe(res => {
       this.dataSource = res.body;
     })
   }

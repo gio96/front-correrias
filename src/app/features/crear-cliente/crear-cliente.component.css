@@ -12,15 +12,20 @@
 }
 
 .example-container{
-  text-align: center;
+
   display: inline-block;
   vertical-align: middle;
+}
+
+.alinear{
+  text-align: center;
 }
 
 .form-container{
   width: 400 px;
   margin: 0 px auto;
   margin-top: 200 px;
+  padding: 3rem;
 }
 
 .form-field{
