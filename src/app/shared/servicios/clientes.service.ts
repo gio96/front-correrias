@@ -38,6 +38,11 @@ export class ClientesService {
   }
 
 
+  public showTcrm(): Observable<any>{
+    return this.http.get<any>(`https://trm-colombia.makaw-dev.now.sh/?date=2020-10-06`,{observe: 'response'})
+  }
+
+
   private handleError(error: HttpErrorResponse): any {
     if (error.error instanceof ErrorEvent) {
       console.error('An error occurred:', error.error.message);
